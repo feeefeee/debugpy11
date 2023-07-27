@@ -1,0 +1,875 @@
+0 Starting Session:
+{
+    "name": "Python: Remote Attach",
+    "type": "python",
+    "request": "attach",
+    "connect": {
+        "host": "localhost",
+        "port": 5678
+    },
+    "pathMappings": [
+        {
+            "localRoot": "D:\\repos\\github\\feeefeee\\debugpy11/src/app1/app1",
+            "remoteRoot": "."
+        }
+    ],
+    "justMyCode": true,
+    "logToFile": true,
+    "redirectOutput": false,
+    "__configurationTarget": 6,
+    "clientOS": "windows",
+    "debugOptions": [
+        "ShowReturnValue"
+    ],
+    "showReturnValue": true,
+    "workspaceFolder": "d:\\repos\\github\\feeefeee\\debugpy11"
+}
+2 Client --> Adapter:
+{
+    "command": "initialize",
+    "arguments": {
+        "clientID": "vscode",
+        "clientName": "Visual Studio Code",
+        "adapterID": "python",
+        "pathFormat": "path",
+        "linesStartAt1": true,
+        "columnsStartAt1": true,
+        "supportsVariableType": true,
+        "supportsVariablePaging": true,
+        "supportsRunInTerminalRequest": true,
+        "locale": "en",
+        "supportsProgressReporting": true,
+        "supportsInvalidatedEvent": true,
+        "supportsMemoryReferences": true,
+        "supportsArgsCanBeInterpretedByShell": true,
+        "supportsMemoryEvent": true,
+        "supportsStartDebuggingRequest": true
+    },
+    "type": "request",
+    "seq": 1
+}
+2 Client <-- Adapter:
+{
+    "seq": 1,
+    "type": "event",
+    "event": "output",
+    "body": {
+        "category": "telemetry",
+        "output": "ptvsd",
+        "data": {
+            "packageVersion": "1.6.7"
+        }
+    }
+}
+2 Client <-- Adapter:
+{
+    "seq": 2,
+    "type": "event",
+    "event": "output",
+    "body": {
+        "category": "telemetry",
+        "output": "debugpy",
+        "data": {
+            "packageVersion": "1.6.7"
+        }
+    }
+}
+3 Client <-- Adapter:
+{
+    "seq": 3,
+    "type": "response",
+    "request_seq": 1,
+    "success": true,
+    "command": "initialize",
+    "body": {
+        "supportsCompletionsRequest": true,
+        "supportsConditionalBreakpoints": true,
+        "supportsConfigurationDoneRequest": true,
+        "supportsDebuggerProperties": true,
+        "supportsDelayedStackTraceLoading": true,
+        "supportsEvaluateForHovers": true,
+        "supportsExceptionInfoRequest": true,
+        "supportsExceptionOptions": true,
+        "supportsFunctionBreakpoints": true,
+        "supportsHitConditionalBreakpoints": true,
+        "supportsLogPoints": true,
+        "supportsModulesRequest": true,
+        "supportsSetExpression": true,
+        "supportsSetVariable": true,
+        "supportsValueFormattingOptions": true,
+        "supportsTerminateRequest": true,
+        "supportsGotoTargetsRequest": true,
+        "supportsClipboardContext": true,
+        "exceptionBreakpointFilters": [
+            {
+                "filter": "raised",
+                "label": "Raised Exceptions",
+                "default": false,
+                "description": "Break whenever any exception is raised."
+            },
+            {
+                "filter": "uncaught",
+                "label": "Uncaught Exceptions",
+                "default": true,
+                "description": "Break when the process is exiting due to unhandled exception."
+            },
+            {
+                "filter": "userUnhandled",
+                "label": "User Uncaught Exceptions",
+                "default": false,
+                "description": "Break when exception escapes into library code."
+            }
+        ],
+        "supportsStepInTargetsRequest": true
+    }
+}
+4 Client --> Adapter:
+{
+    "command": "attach",
+    "arguments": {
+        "name": "Python: Remote Attach",
+        "type": "python",
+        "request": "attach",
+        "connect": {
+            "host": "localhost",
+            "port": 5678
+        },
+        "pathMappings": [
+            {
+                "localRoot": "D:\\repos\\github\\feeefeee\\debugpy11/src/app1/app1",
+                "remoteRoot": "."
+            }
+        ],
+        "justMyCode": true,
+        "logToFile": true,
+        "redirectOutput": false,
+        "__configurationTarget": 6,
+        "clientOS": "windows",
+        "debugOptions": [
+            "ShowReturnValue"
+        ],
+        "showReturnValue": true,
+        "workspaceFolder": "d:\\repos\\github\\feeefeee\\debugpy11",
+        "__sessionId": "e37e7dff-3d0f-46a9-aa82-f31504814da9"
+    },
+    "type": "request",
+    "seq": 2
+}
+4 Client <-- Adapter:
+{
+    "seq": 4,
+    "type": "event",
+    "event": "debugpyWaitingForServer",
+    "body": {
+        "host": "127.0.0.1",
+        "port": 49752
+    }
+}
+9 Client <-- Adapter:
+{
+    "seq": 5,
+    "type": "event",
+    "event": "initialized"
+}
+10 Client --> Adapter:
+{
+    "command": "setBreakpoints",
+    "arguments": {
+        "source": {
+            "name": "testing.py",
+            "path": "d:\\repos\\github\\feeefeee\\debugpy11\\src\\app1\\app1\\testing.py"
+        },
+        "lines": [
+            2,
+            6
+        ],
+        "breakpoints": [
+            {
+                "line": 2
+            },
+            {
+                "line": 6
+            }
+        ],
+        "sourceModified": false
+    },
+    "type": "request",
+    "seq": 3
+}
+10 Client --> Adapter:
+{
+    "command": "setFunctionBreakpoints",
+    "arguments": {
+        "breakpoints": []
+    },
+    "type": "request",
+    "seq": 4
+}
+11 Client --> Adapter:
+{
+    "command": "setExceptionBreakpoints",
+    "arguments": {
+        "filters": [
+            "uncaught"
+        ]
+    },
+    "type": "request",
+    "seq": 5
+}
+17 Client <-- Adapter:
+{
+    "seq": 6,
+    "type": "response",
+    "request_seq": 3,
+    "success": true,
+    "command": "setBreakpoints",
+    "body": {
+        "breakpoints": [
+            {
+                "verified": true,
+                "id": 0,
+                "source": {
+                    "name": "testing.py",
+                    "path": "d:\\repos\\github\\feeefeee\\debugpy11\\src\\app1\\app1\\testing.py"
+                },
+                "line": 2
+            },
+            {
+                "verified": true,
+                "id": 1,
+                "source": {
+                    "name": "testing.py",
+                    "path": "d:\\repos\\github\\feeefeee\\debugpy11\\src\\app1\\app1\\testing.py"
+                },
+                "line": 6
+            }
+        ]
+    }
+}
+18 Client <-- Adapter:
+{
+    "seq": 7,
+    "type": "response",
+    "request_seq": 4,
+    "success": true,
+    "command": "setFunctionBreakpoints",
+    "body": {
+        "breakpoints": []
+    }
+}
+20 Client <-- Adapter:
+{
+    "seq": 8,
+    "type": "response",
+    "request_seq": 5,
+    "success": true,
+    "command": "setExceptionBreakpoints"
+}
+71 Client --> Adapter:
+{
+    "command": "configurationDone",
+    "type": "request",
+    "seq": 6
+}
+74 Client <-- Adapter:
+{
+    "seq": 9,
+    "type": "response",
+    "request_seq": 6,
+    "success": true,
+    "command": "configurationDone"
+}
+75 Client <-- Adapter:
+{
+    "seq": 10,
+    "type": "response",
+    "request_seq": 2,
+    "success": true,
+    "command": "attach"
+}
+75 Client <-- Adapter:
+{
+    "seq": 11,
+    "type": "event",
+    "event": "process",
+    "body": {
+        "name": "",
+        "systemProcessId": 231712,
+        "isLocalProcess": true,
+        "startMethod": "attach"
+    }
+}
+75 Client <-- Adapter:
+{
+    "seq": 12,
+    "type": "event",
+    "event": "thread",
+    "body": {
+        "reason": "started",
+        "threadId": 1
+    }
+}
+76 Client --> Adapter:
+{
+    "command": "threads",
+    "type": "request",
+    "seq": 7
+}
+202 Client --> Adapter:
+{
+    "command": "threads",
+    "type": "request",
+    "seq": 8
+}
+36779 Client <-- Adapter:
+{
+    "seq": 13,
+    "type": "response",
+    "request_seq": 7,
+    "success": true,
+    "command": "threads",
+    "body": {
+        "threads": [
+            {
+                "id": 1,
+                "name": "MainThread"
+            }
+        ]
+    }
+}
+36781 Client <-- Adapter:
+{
+    "seq": 14,
+    "type": "response",
+    "request_seq": 8,
+    "success": true,
+    "command": "threads",
+    "body": {
+        "threads": [
+            {
+                "id": 1,
+                "name": "MainThread"
+            }
+        ]
+    }
+}
+36781 Client <-- Adapter:
+{
+    "seq": 15,
+    "type": "event",
+    "event": "stopped",
+    "body": {
+        "reason": "breakpoint",
+        "threadId": 1,
+        "preserveFocusHint": false,
+        "allThreadsStopped": true
+    }
+}
+36808 Client --> Adapter:
+{
+    "command": "threads",
+    "type": "request",
+    "seq": 9
+}
+36810 Client <-- Adapter:
+{
+    "seq": 16,
+    "type": "response",
+    "request_seq": 9,
+    "success": true,
+    "command": "threads",
+    "body": {
+        "threads": [
+            {
+                "id": 1,
+                "name": "MainThread"
+            }
+        ]
+    }
+}
+36815 Client --> Adapter:
+{
+    "command": "stackTrace",
+    "arguments": {
+        "threadId": 1,
+        "startFrame": 0,
+        "levels": 1
+    },
+    "type": "request",
+    "seq": 10
+}
+36818 Client <-- Adapter:
+{
+    "seq": 17,
+    "type": "response",
+    "request_seq": 10,
+    "success": true,
+    "command": "stackTrace",
+    "body": {
+        "stackFrames": [
+            {
+                "id": 2,
+                "name": "<module>",
+                "line": 2,
+                "column": 1,
+                "source": {
+                    "path": "D:\\repos\\github\\feeefeee\\debugpy11\\src\\app1\\app1\\testing.py",
+                    "sourceReference": 0
+                }
+            }
+        ],
+        "totalFrames": 1
+    }
+}
+36818 Client <-- Adapter:
+{
+    "seq": 18,
+    "type": "event",
+    "event": "module",
+    "body": {
+        "reason": "new",
+        "module": {
+            "id": 0,
+            "name": "__main__",
+            "path": "D:\\repos\\github\\feeefeee\\debugpy11\\src\\app1\\app1\\testing.py",
+            "package": "None"
+        }
+    }
+}
+37230 Client --> Adapter:
+{
+    "command": "scopes",
+    "arguments": {
+        "frameId": 2
+    },
+    "type": "request",
+    "seq": 11
+}
+37234 Client <-- Adapter:
+{
+    "seq": 19,
+    "type": "response",
+    "request_seq": 11,
+    "success": true,
+    "command": "scopes",
+    "body": {
+        "scopes": [
+            {
+                "name": "Locals",
+                "variablesReference": 3,
+                "expensive": false,
+                "presentationHint": "locals",
+                "source": {}
+            },
+            {
+                "name": "Globals",
+                "variablesReference": 4,
+                "expensive": false,
+                "source": {}
+            }
+        ]
+    }
+}
+37237 Client --> Adapter:
+{
+    "command": "variables",
+    "arguments": {
+        "variablesReference": 3
+    },
+    "type": "request",
+    "seq": 12
+}
+37245 Client --> Adapter:
+{
+    "command": "stackTrace",
+    "arguments": {
+        "threadId": 1,
+        "startFrame": 1,
+        "levels": 19
+    },
+    "type": "request",
+    "seq": 13
+}
+37246 Client <-- Adapter:
+{
+    "seq": 20,
+    "type": "response",
+    "request_seq": 12,
+    "success": true,
+    "command": "variables",
+    "body": {
+        "variables": [
+            {
+                "name": "special variables",
+                "value": "",
+                "type": "",
+                "evaluateName": "special variables",
+                "variablesReference": 5
+            },
+            {
+                "name": "debugpy",
+                "value": "<module 'debugpy' from 'C:\\\\Python\\\\Python39\\\\lib\\\\site-packages\\\\debugpy\\\\__init__.py'>",
+                "type": "module",
+                "evaluateName": "debugpy",
+                "variablesReference": 6
+            },
+            {
+                "name": "os",
+                "value": "<module 'os' from 'C:\\\\Python\\\\Python39\\\\Lib\\\\os.py'>",
+                "type": "module",
+                "evaluateName": "os",
+                "variablesReference": 7
+            },
+            {
+                "name": "sys",
+                "value": "<module 'sys' (built-in)>",
+                "type": "module",
+                "evaluateName": "sys",
+                "variablesReference": 8
+            }
+        ]
+    }
+}
+37248 Client <-- Adapter:
+{
+    "seq": 21,
+    "type": "response",
+    "request_seq": 13,
+    "success": true,
+    "command": "stackTrace",
+    "body": {
+        "stackFrames": [],
+        "totalFrames": 1
+    }
+}
+39795 Client --> Adapter:
+{
+    "command": "continue",
+    "arguments": {
+        "threadId": 1
+    },
+    "type": "request",
+    "seq": 14
+}
+39803 Client <-- Adapter:
+{
+    "seq": 22,
+    "type": "response",
+    "request_seq": 14,
+    "success": true,
+    "command": "continue",
+    "body": {
+        "allThreadsContinued": true
+    }
+}
+39804 Client <-- Adapter:
+{
+    "seq": 23,
+    "type": "event",
+    "event": "continued",
+    "body": {
+        "threadId": 1,
+        "allThreadsContinued": true
+    }
+}
+39804 Client <-- Adapter:
+{
+    "seq": 24,
+    "type": "event",
+    "event": "stopped",
+    "body": {
+        "reason": "breakpoint",
+        "threadId": 1,
+        "preserveFocusHint": false,
+        "allThreadsStopped": true
+    }
+}
+39823 Client --> Adapter:
+{
+    "command": "threads",
+    "type": "request",
+    "seq": 15
+}
+39826 Client <-- Adapter:
+{
+    "seq": 25,
+    "type": "response",
+    "request_seq": 15,
+    "success": true,
+    "command": "threads",
+    "body": {
+        "threads": [
+            {
+                "id": 1,
+                "name": "MainThread"
+            }
+        ]
+    }
+}
+39828 Client --> Adapter:
+{
+    "command": "stackTrace",
+    "arguments": {
+        "threadId": 1,
+        "startFrame": 0,
+        "levels": 1
+    },
+    "type": "request",
+    "seq": 16
+}
+39831 Client <-- Adapter:
+{
+    "seq": 26,
+    "type": "response",
+    "request_seq": 16,
+    "success": true,
+    "command": "stackTrace",
+    "body": {
+        "stackFrames": [
+            {
+                "id": 2,
+                "name": "<module>",
+                "line": 6,
+                "column": 1,
+                "source": {
+                    "path": "D:\\repos\\github\\feeefeee\\debugpy11\\src\\app1\\app1\\testing.py",
+                    "sourceReference": 0
+                }
+            }
+        ],
+        "totalFrames": 1
+    }
+}
+40258 Client --> Adapter:
+{
+    "command": "scopes",
+    "arguments": {
+        "frameId": 2
+    },
+    "type": "request",
+    "seq": 17
+}
+40260 Client <-- Adapter:
+{
+    "seq": 27,
+    "type": "response",
+    "request_seq": 17,
+    "success": true,
+    "command": "scopes",
+    "body": {
+        "scopes": [
+            {
+                "name": "Locals",
+                "variablesReference": 3,
+                "expensive": false,
+                "presentationHint": "locals",
+                "source": {}
+            },
+            {
+                "name": "Globals",
+                "variablesReference": 4,
+                "expensive": false,
+                "source": {}
+            }
+        ]
+    }
+}
+40261 Client --> Adapter:
+{
+    "command": "variables",
+    "arguments": {
+        "variablesReference": 3
+    },
+    "type": "request",
+    "seq": 18
+}
+40274 Client --> Adapter:
+{
+    "command": "stackTrace",
+    "arguments": {
+        "threadId": 1,
+        "startFrame": 1,
+        "levels": 19
+    },
+    "type": "request",
+    "seq": 19
+}
+40275 Client <-- Adapter:
+{
+    "seq": 28,
+    "type": "response",
+    "request_seq": 18,
+    "success": true,
+    "command": "variables",
+    "body": {
+        "variables": [
+            {
+                "name": "special variables",
+                "value": "",
+                "type": "",
+                "evaluateName": "special variables",
+                "variablesReference": 9
+            },
+            {
+                "name": "debugpy",
+                "value": "<module 'debugpy' from 'C:\\\\Python\\\\Python39\\\\lib\\\\site-packages\\\\debugpy\\\\__init__.py'>",
+                "type": "module",
+                "evaluateName": "debugpy",
+                "variablesReference": 6
+            },
+            {
+                "name": "i",
+                "value": "9",
+                "type": "int",
+                "evaluateName": "i",
+                "variablesReference": 0
+            },
+            {
+                "name": "os",
+                "value": "<module 'os' from 'C:\\\\Python\\\\Python39\\\\Lib\\\\os.py'>",
+                "type": "module",
+                "evaluateName": "os",
+                "variablesReference": 7
+            },
+            {
+                "name": "sys",
+                "value": "<module 'sys' (built-in)>",
+                "type": "module",
+                "evaluateName": "sys",
+                "variablesReference": 8
+            }
+        ]
+    }
+}
+40277 Client <-- Adapter:
+{
+    "seq": 29,
+    "type": "response",
+    "request_seq": 19,
+    "success": true,
+    "command": "stackTrace",
+    "body": {
+        "stackFrames": [],
+        "totalFrames": 1
+    }
+}
+40800 Client --> Adapter:
+{
+    "command": "continue",
+    "arguments": {
+        "threadId": 1
+    },
+    "type": "request",
+    "seq": 20
+}
+44616 Client --> Adapter:
+{
+    "command": "continue",
+    "arguments": {
+        "threadId": 1
+    },
+    "type": "request",
+    "seq": 21
+}
+45638 Client --> Adapter:
+{
+    "command": "continue",
+    "arguments": {
+        "threadId": 1
+    },
+    "type": "request",
+    "seq": 22
+}
+1285419 Client --> Adapter:
+{
+    "command": "continue",
+    "arguments": {
+        "threadId": 1
+    },
+    "type": "request",
+    "seq": 23
+}
+1286146 Client --> Adapter:
+{
+    "command": "continue",
+    "arguments": {
+        "threadId": 1
+    },
+    "type": "request",
+    "seq": 24
+}
+1286339 Client --> Adapter:
+{
+    "command": "continue",
+    "arguments": {
+        "threadId": 1
+    },
+    "type": "request",
+    "seq": 25
+}
+1286540 Client --> Adapter:
+{
+    "command": "continue",
+    "arguments": {
+        "threadId": 1
+    },
+    "type": "request",
+    "seq": 26
+}
+1286738 Client --> Adapter:
+{
+    "command": "continue",
+    "arguments": {
+        "threadId": 1
+    },
+    "type": "request",
+    "seq": 27
+}
+1286900 Client --> Adapter:
+{
+    "command": "continue",
+    "arguments": {
+        "threadId": 1
+    },
+    "type": "request",
+    "seq": 28
+}
+1287036 Client --> Adapter:
+{
+    "command": "continue",
+    "arguments": {
+        "threadId": 1
+    },
+    "type": "request",
+    "seq": 29
+}
+1287238 Client --> Adapter:
+{
+    "command": "continue",
+    "arguments": {
+        "threadId": 1
+    },
+    "type": "request",
+    "seq": 30
+}
+1423241 Client <-- Adapter:
+{
+    "seq": 30,
+    "type": "response",
+    "request_seq": 20,
+    "success": true,
+    "command": "continue",
+    "body": {
+        "allThreadsContinued": true
+    }
+}
+1423241 Client <-- Adapter:
+{
+    "seq": 31,
+    "type": "event",
+    "event": "continued",
+    "body": {
+        "threadId": 1,
+        "allThreadsContinued": true
+    }
+}

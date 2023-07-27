@@ -1,0 +1,1895 @@
+I+00000.062: Windows-10-10.0.19044-SP0 AMD64
+             CPython 3.9.12 (64-bit)
+             debugpy 1.6.7
+
+I+00000.078: debugpy.adapter startup environment:
+             
+             System paths:
+                 sys.executable: c:\Python\Python39\python.exe(C:\Python\Python39\python.exe)
+                 sys.prefix: c:\Python\Python39(C:\Python\Python39)
+                 sys.base_prefix: c:\Python\Python39(C:\Python\Python39)
+                 sys.real_prefix: <missing>
+                 site.getsitepackages(): c:\Python\Python39(C:\Python\Python39)
+                                         c:\Python\Python39\lib\site-packages(C:\Python\Python39\Lib\site-packages)
+                 site.getusersitepackages(): C:\Users\philippe.crassous\AppData\Roaming\Python\Python39\site-packages
+                 sys.path (site-packages): c:\Python\Python39\lib\site-packages(C:\Python\Python39\Lib\site-packages)
+                 sysconfig.get_path('stdlib'): c:\Python\Python39\Lib(C:\Python\Python39\Lib)
+                 sysconfig.get_path('platstdlib'): c:\Python\Python39\Lib(C:\Python\Python39\Lib)
+                 sysconfig.get_path('purelib'): c:\Python\Python39\Lib\site-packages(C:\Python\Python39\Lib\site-packages)
+                 sysconfig.get_path('platlib'): c:\Python\Python39\Lib\site-packages(C:\Python\Python39\Lib\site-packages)
+                 sysconfig.get_path('include'): c:\Python\Python39\Include(C:\Python\Python39\include)
+                 sysconfig.get_path('scripts'): c:\Python\Python39\Scripts(C:\Python\Python39\Scripts)
+                 sysconfig.get_path('data'): c:\Python\Python39(C:\Python\Python39)
+                 os.__file__: c:\Python\Python39\lib\os.py(C:\Python\Python39\Lib\os.py)
+                 threading.__file__: c:\Python\Python39\lib\threading.py(C:\Python\Python39\Lib\threading.py)
+                 debugpy.__file__: C:\Python\Python39\lib\site-packages\debugpy\adapter/../..\debugpy\__init__.py(C:\Python\Python39\Lib\site-packages\debugpy\__init__.py)
+
+I+00000.078: Listening for incoming Client connections on 127.0.0.1:5678...
+
+I+00000.078: Listening for incoming Server connections on 127.0.0.1:49752...
+
+I+00000.078: Sending endpoints info to debug server at localhost:49751:
+             {
+                 "client": {
+                     "host": "127.0.0.1",
+                     "port": 5678
+                 },
+                 "server": {
+                     "host": "127.0.0.1",
+                     "port": 49752
+                 }
+             }
+
+I+00000.078: Accepted incoming Server connection from 127.0.0.1:49754.
+
+D+00000.078: Starting message loop for channel Server[?]
+
+D+00000.078: Server[?] <-- {
+                 "seq": 1,
+                 "type": "request",
+                 "command": "pydevdAuthorize",
+                 "arguments": {
+                     "debugServerAccessToken": "bf9deeb01e6df9228674339c879032107353e951ce8044a1d5d13dab7bbf2c1b"
+                 }
+             }
+
+D+00000.094: Server[?] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 2,
+                 "type": "response",
+                 "request_seq": 1,
+                 "success": true,
+                 "command": "pydevdAuthorize",
+                 "body": {
+                     "clientAccessToken": null
+                 }
+             }
+
+D+00000.094: Server[?] <-- {
+                 "seq": 2,
+                 "type": "request",
+                 "command": "pydevdSystemInfo"
+             }
+
+D+00000.156: Server[?] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 4,
+                 "type": "response",
+                 "request_seq": 2,
+                 "success": true,
+                 "command": "pydevdSystemInfo",
+                 "body": {
+                     "python": {
+                         "version": "3.9.17final0",
+                         "implementation": {
+                             "name": "cpython",
+                             "version": "3.9.17final0",
+                             "description": "CPython"
+                         }
+                     },
+                     "platform": {
+                         "name": "win32"
+                     },
+                     "process": {
+                         "pid": 231712,
+                         "ppid": 234144,
+                         "executable": "D:\\repos\\github\\feeefeee\\debugpy11\\src\\app1\\x64\\Debug\\app1.exe",
+                         "bitness": 64
+                     },
+                     "pydevd": {
+                         "usingCython": true,
+                         "usingFrameEval": false
+                     }
+                 }
+             }
+
+I+00000.156: No active debug session for parent process of Server[pid=231712].
+
+I+00012.781: Accepted incoming Client connection from 127.0.0.1:49790.
+
+D+00012.781: Starting message loop for channel Client[1]
+
+D+00012.781: Client[1] <-- {
+                 "seq": 1,
+                 "type": "event",
+                 "event": "output",
+                 "body": {
+                     "category": "telemetry",
+                     "output": "ptvsd",
+                     "data": {
+                         "packageVersion": "1.6.7"
+                     }
+                 }
+             }
+
+D+00012.781: Client[1] <-- {
+                 "seq": 2,
+                 "type": "event",
+                 "event": "output",
+                 "body": {
+                     "category": "telemetry",
+                     "output": "debugpy",
+                     "data": {
+                         "packageVersion": "1.6.7"
+                     }
+                 }
+             }
+
+D+00012.781: Client[1] --> {
+                 "seq": 1,
+                 "type": "request",
+                 "command": "initialize",
+                 "arguments": {
+                     "clientID": "vscode",
+                     "clientName": "Visual Studio Code",
+                     "adapterID": "python",
+                     "pathFormat": "path",
+                     "linesStartAt1": true,
+                     "columnsStartAt1": true,
+                     "supportsVariableType": true,
+                     "supportsVariablePaging": true,
+                     "supportsRunInTerminalRequest": true,
+                     "locale": "en",
+                     "supportsProgressReporting": true,
+                     "supportsInvalidatedEvent": true,
+                     "supportsMemoryReferences": true,
+                     "supportsArgsCanBeInterpretedByShell": true,
+                     "supportsMemoryEvent": true,
+                     "supportsStartDebuggingRequest": true
+                 }
+             }
+
+D+00012.781: /handling #1 request "initialize" from Client[1]/
+             Capabilities: {
+                 "supportsVariableType": true,
+                 "supportsVariablePaging": true,
+                 "supportsRunInTerminalRequest": true,
+                 "supportsMemoryReferences": true,
+                 "supportsArgsCanBeInterpretedByShell": true,
+                 "supportsStartDebuggingRequest": true
+             }
+
+D+00012.781: /handling #1 request "initialize" from Client[1]/
+             Expectations: {
+                 "locale": "en",
+                 "linesStartAt1": true,
+                 "columnsStartAt1": true,
+                 "pathFormat": "path"
+             }
+
+D+00012.781: /handling #1 request "initialize" from Client[1]/
+             Client[1] <-- {
+                 "seq": 3,
+                 "type": "response",
+                 "request_seq": 1,
+                 "success": true,
+                 "command": "initialize",
+                 "body": {
+                     "supportsCompletionsRequest": true,
+                     "supportsConditionalBreakpoints": true,
+                     "supportsConfigurationDoneRequest": true,
+                     "supportsDebuggerProperties": true,
+                     "supportsDelayedStackTraceLoading": true,
+                     "supportsEvaluateForHovers": true,
+                     "supportsExceptionInfoRequest": true,
+                     "supportsExceptionOptions": true,
+                     "supportsFunctionBreakpoints": true,
+                     "supportsHitConditionalBreakpoints": true,
+                     "supportsLogPoints": true,
+                     "supportsModulesRequest": true,
+                     "supportsSetExpression": true,
+                     "supportsSetVariable": true,
+                     "supportsValueFormattingOptions": true,
+                     "supportsTerminateRequest": true,
+                     "supportsGotoTargetsRequest": true,
+                     "supportsClipboardContext": true,
+                     "exceptionBreakpointFilters": [
+                         {
+                             "filter": "raised",
+                             "label": "Raised Exceptions",
+                             "default": false,
+                             "description": "Break whenever any exception is raised."
+                         },
+                         {
+                             "filter": "uncaught",
+                             "label": "Uncaught Exceptions",
+                             "default": true,
+                             "description": "Break when the process is exiting due to unhandled exception."
+                         },
+                         {
+                             "filter": "userUnhandled",
+                             "label": "User Uncaught Exceptions",
+                             "default": false,
+                             "description": "Break when exception escapes into library code."
+                         }
+                     ],
+                     "supportsStepInTargetsRequest": true
+                 }
+             }
+
+D+00012.781: Client[1] --> {
+                 "seq": 2,
+                 "type": "request",
+                 "command": "attach",
+                 "arguments": {
+                     "name": "Python: Remote Attach",
+                     "type": "python",
+                     "request": "attach",
+                     "connect": {
+                         "host": "localhost",
+                         "port": 5678
+                     },
+                     "pathMappings": [
+                         {
+                             "localRoot": "D:\\repos\\github\\feeefeee\\debugpy11/src/app1/app1",
+                             "remoteRoot": "."
+                         }
+                     ],
+                     "justMyCode": true,
+                     "logToFile": true,
+                     "redirectOutput": false,
+                     "__configurationTarget": 6,
+                     "clientOS": "windows",
+                     "debugOptions": [
+                         "ShowReturnValue"
+                     ],
+                     "showReturnValue": true,
+                     "workspaceFolder": "d:\\repos\\github\\feeefeee\\debugpy11",
+                     "__sessionId": "e37e7dff-3d0f-46a9-aa82-f31504814da9"
+                 }
+             }
+
+D+00012.781: /handling #2 request "attach" from Client[1]/
+             Client[1] <-- {
+                 "seq": 4,
+                 "type": "event",
+                 "event": "debugpyWaitingForServer",
+                 "body": {
+                     "host": "127.0.0.1",
+                     "port": 49752
+                 }
+             }
+
+I+00012.781: /handling #2 request "attach" from Client[1]/
+             Session[1] waiting for connection from debug server...
+
+I+00012.781: /handling #2 request "attach" from Client[1]/
+             Attaching Server[pid=231712] to Session[1]
+
+D+00012.781: /handling #2 request "attach" from Client[1]/
+             Server[1] <-- {
+                 "seq": 3,
+                 "type": "request",
+                 "command": "pydevdAuthorize",
+                 "arguments": {
+                     "debugServerAccessToken": "bf9deeb01e6df9228674339c879032107353e951ce8044a1d5d13dab7bbf2c1b"
+                 }
+             }
+
+D+00012.781: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 6,
+                 "type": "response",
+                 "request_seq": 3,
+                 "success": true,
+                 "command": "pydevdAuthorize",
+                 "body": {
+                     "clientAccessToken": null
+                 }
+             }
+
+D+00012.781: /handling #2 request "attach" from Client[1]/
+             Server[1] <-- {
+                 "seq": 4,
+                 "type": "request",
+                 "command": "initialize",
+                 "arguments": {
+                     "clientID": "vscode",
+                     "clientName": "Visual Studio Code",
+                     "adapterID": "python",
+                     "pathFormat": "path",
+                     "linesStartAt1": true,
+                     "columnsStartAt1": true,
+                     "supportsVariableType": true,
+                     "supportsVariablePaging": true,
+                     "supportsRunInTerminalRequest": true,
+                     "locale": "en",
+                     "supportsProgressReporting": true,
+                     "supportsInvalidatedEvent": true,
+                     "supportsMemoryReferences": true,
+                     "supportsArgsCanBeInterpretedByShell": true,
+                     "supportsMemoryEvent": true,
+                     "supportsStartDebuggingRequest": true
+                 }
+             }
+
+D+00012.781: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 8,
+                 "type": "response",
+                 "request_seq": 4,
+                 "success": true,
+                 "command": "initialize",
+                 "body": {
+                     "supportsConfigurationDoneRequest": true,
+                     "supportsFunctionBreakpoints": true,
+                     "supportsConditionalBreakpoints": true,
+                     "supportsHitConditionalBreakpoints": true,
+                     "supportsEvaluateForHovers": true,
+                     "exceptionBreakpointFilters": [
+                         {
+                             "filter": "raised",
+                             "label": "Raised Exceptions",
+                             "default": false
+                         },
+                         {
+                             "filter": "uncaught",
+                             "label": "Uncaught Exceptions",
+                             "default": true
+                         },
+                         {
+                             "filter": "userUnhandled",
+                             "label": "User Uncaught Exceptions",
+                             "default": false
+                         }
+                     ],
+                     "supportsStepBack": false,
+                     "supportsSetVariable": true,
+                     "supportsRestartFrame": false,
+                     "supportsGotoTargetsRequest": true,
+                     "supportsStepInTargetsRequest": true,
+                     "supportsCompletionsRequest": true,
+                     "completionTriggerCharacters": [],
+                     "supportsModulesRequest": true,
+                     "additionalModuleColumns": [],
+                     "supportedChecksumAlgorithms": [],
+                     "supportsRestartRequest": false,
+                     "supportsExceptionOptions": true,
+                     "supportsValueFormattingOptions": true,
+                     "supportsExceptionInfoRequest": true,
+                     "supportTerminateDebuggee": true,
+                     "supportsDelayedStackTraceLoading": true,
+                     "supportsLoadedSourcesRequest": false,
+                     "supportsLogPoints": true,
+                     "supportsTerminateThreadsRequest": false,
+                     "supportsSetExpression": true,
+                     "supportsTerminateRequest": true,
+                     "supportsDataBreakpoints": false,
+                     "supportsReadMemoryRequest": false,
+                     "supportsDisassembleRequest": false,
+                     "supportsClipboardContext": true,
+                     "supportsDebuggerProperties": true,
+                     "pydevd": {
+                         "processId": 231712
+                     }
+                 }
+             }
+
+D+00012.781: /handling #2 request "attach" from Client[1]/
+             Capabilities: {
+                 "supportsCompletionsRequest": true,
+                 "supportsConditionalBreakpoints": true,
+                 "supportsConfigurationDoneRequest": true,
+                 "supportsDataBreakpoints": false,
+                 "supportsDelayedStackTraceLoading": true,
+                 "supportsDisassembleRequest": false,
+                 "supportsEvaluateForHovers": true,
+                 "supportsExceptionInfoRequest": true,
+                 "supportsExceptionOptions": true,
+                 "supportsFunctionBreakpoints": true,
+                 "supportsGotoTargetsRequest": true,
+                 "supportsHitConditionalBreakpoints": true,
+                 "supportsLoadedSourcesRequest": false,
+                 "supportsLogPoints": true,
+                 "supportsModulesRequest": true,
+                 "supportsReadMemoryRequest": false,
+                 "supportsRestartFrame": false,
+                 "supportsRestartRequest": false,
+                 "supportsSetExpression": true,
+                 "supportsSetVariable": true,
+                 "supportsStepBack": false,
+                 "supportsStepInTargetsRequest": true,
+                 "supportsTerminateRequest": true,
+                 "supportsTerminateThreadsRequest": false,
+                 "supportsValueFormattingOptions": true,
+                 "exceptionBreakpointFilters": [
+                     {
+                         "filter": "raised",
+                         "label": "Raised Exceptions",
+                         "default": false
+                     },
+                     {
+                         "filter": "uncaught",
+                         "label": "Uncaught Exceptions",
+                         "default": true
+                     },
+                     {
+                         "filter": "userUnhandled",
+                         "label": "User Uncaught Exceptions",
+                         "default": false
+                     }
+                 ],
+                 "additionalModuleColumns": [],
+                 "supportedChecksumAlgorithms": []
+             }
+
+D+00012.797: /handling #2 request "attach" from Client[1]/
+             Server[1] <-- {
+                 "seq": 5,
+                 "type": "request",
+                 "command": "attach",
+                 "arguments": {
+                     "name": "Python: Remote Attach",
+                     "type": "python",
+                     "request": "attach",
+                     "connect": {
+                         "host": "localhost",
+                         "port": 5678
+                     },
+                     "pathMappings": [
+                         {
+                             "localRoot": "D:\\repos\\github\\feeefeee\\debugpy11/src/app1/app1",
+                             "remoteRoot": "."
+                         }
+                     ],
+                     "justMyCode": true,
+                     "logToFile": true,
+                     "redirectOutput": false,
+                     "__configurationTarget": 6,
+                     "clientOS": "windows",
+                     "debugOptions": [
+                         "ShowReturnValue"
+                     ],
+                     "showReturnValue": true,
+                     "workspaceFolder": "d:\\repos\\github\\feeefeee\\debugpy11",
+                     "__sessionId": "e37e7dff-3d0f-46a9-aa82-f31504814da9"
+                 }
+             }
+
+D+00012.797: Server[1] --> {
+                 "pydevd_cmd_id": 204,
+                 "seq": 10,
+                 "type": "event",
+                 "event": "process",
+                 "body": {
+                     "name": "",
+                     "systemProcessId": 231712,
+                     "isLocalProcess": true,
+                     "startMethod": "attach"
+                 }
+             }
+
+D+00012.797: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 12,
+                 "type": "event",
+                 "event": "initialized"
+             }
+
+D+00012.797: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 14,
+                 "type": "response",
+                 "request_seq": 5,
+                 "success": true,
+                 "command": "attach"
+             }
+
+D+00012.797: /handling #2 request "attach" from Client[1]/
+             Client[1] <-- {
+                 "seq": 5,
+                 "type": "event",
+                 "event": "initialized"
+             }
+
+D+00012.797: /handling #10 event "process" from Server[1]/
+             Propagation deferred.
+
+D+00012.797: Client[1] --> {
+                 "seq": 3,
+                 "type": "request",
+                 "command": "setBreakpoints",
+                 "arguments": {
+                     "source": {
+                         "name": "testing.py",
+                         "path": "d:\\repos\\github\\feeefeee\\debugpy11\\src\\app1\\app1\\testing.py"
+                     },
+                     "lines": [
+                         2,
+                         6
+                     ],
+                     "breakpoints": [
+                         {
+                             "line": 2
+                         },
+                         {
+                             "line": 6
+                         }
+                     ],
+                     "sourceModified": false
+                 }
+             }
+
+D+00012.797: Client[1] --> {
+                 "seq": 4,
+                 "type": "request",
+                 "command": "setFunctionBreakpoints",
+                 "arguments": {
+                     "breakpoints": []
+                 }
+             }
+
+D+00012.797: /handling #3 request "setBreakpoints" from Client[1]/
+             Server[1] <-- {
+                 "seq": 6,
+                 "type": "request",
+                 "command": "setBreakpoints",
+                 "arguments": {
+                     "source": {
+                         "name": "testing.py",
+                         "path": "d:\\repos\\github\\feeefeee\\debugpy11\\src\\app1\\app1\\testing.py"
+                     },
+                     "lines": [
+                         2,
+                         6
+                     ],
+                     "breakpoints": [
+                         {
+                             "line": 2
+                         },
+                         {
+                             "line": 6
+                         }
+                     ],
+                     "sourceModified": false
+                 }
+             }
+
+D+00012.797: Client[1] --> {
+                 "seq": 5,
+                 "type": "request",
+                 "command": "setExceptionBreakpoints",
+                 "arguments": {
+                     "filters": [
+                         "uncaught"
+                     ]
+                 }
+             }
+
+D+00012.797: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 16,
+                 "type": "response",
+                 "request_seq": 6,
+                 "success": true,
+                 "command": "setBreakpoints",
+                 "body": {
+                     "breakpoints": [
+                         {
+                             "verified": true,
+                             "id": 0,
+                             "source": {
+                                 "name": "testing.py",
+                                 "path": "d:\\repos\\github\\feeefeee\\debugpy11\\src\\app1\\app1\\testing.py"
+                             },
+                             "line": 2
+                         },
+                         {
+                             "verified": true,
+                             "id": 1,
+                             "source": {
+                                 "name": "testing.py",
+                                 "path": "d:\\repos\\github\\feeefeee\\debugpy11\\src\\app1\\app1\\testing.py"
+                             },
+                             "line": 6
+                         }
+                     ]
+                 }
+             }
+
+D+00012.797: /handling #3 request "setBreakpoints" from Client[1]/
+             Client[1] <-- {
+                 "seq": 6,
+                 "type": "response",
+                 "request_seq": 3,
+                 "success": true,
+                 "command": "setBreakpoints",
+                 "body": {
+                     "breakpoints": [
+                         {
+                             "verified": true,
+                             "id": 0,
+                             "source": {
+                                 "name": "testing.py",
+                                 "path": "d:\\repos\\github\\feeefeee\\debugpy11\\src\\app1\\app1\\testing.py"
+                             },
+                             "line": 2
+                         },
+                         {
+                             "verified": true,
+                             "id": 1,
+                             "source": {
+                                 "name": "testing.py",
+                                 "path": "d:\\repos\\github\\feeefeee\\debugpy11\\src\\app1\\app1\\testing.py"
+                             },
+                             "line": 6
+                         }
+                     ]
+                 }
+             }
+
+D+00012.797: /handling #4 request "setFunctionBreakpoints" from Client[1]/
+             Server[1] <-- {
+                 "seq": 7,
+                 "type": "request",
+                 "command": "setFunctionBreakpoints",
+                 "arguments": {
+                     "breakpoints": []
+                 }
+             }
+
+D+00012.797: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 18,
+                 "type": "response",
+                 "request_seq": 7,
+                 "success": true,
+                 "command": "setFunctionBreakpoints",
+                 "body": {
+                     "breakpoints": []
+                 }
+             }
+
+D+00012.797: /handling #4 request "setFunctionBreakpoints" from Client[1]/
+             Client[1] <-- {
+                 "seq": 7,
+                 "type": "response",
+                 "request_seq": 4,
+                 "success": true,
+                 "command": "setFunctionBreakpoints",
+                 "body": {
+                     "breakpoints": []
+                 }
+             }
+
+D+00012.797: /handling #5 request "setExceptionBreakpoints" from Client[1]/
+             Server[1] <-- {
+                 "seq": 8,
+                 "type": "request",
+                 "command": "setExceptionBreakpoints",
+                 "arguments": {
+                     "filters": [
+                         "uncaught"
+                     ]
+                 }
+             }
+
+D+00012.797: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 20,
+                 "type": "response",
+                 "request_seq": 8,
+                 "success": true,
+                 "command": "setExceptionBreakpoints",
+                 "body": {}
+             }
+
+D+00012.797: /handling #5 request "setExceptionBreakpoints" from Client[1]/
+             Client[1] <-- {
+                 "seq": 8,
+                 "type": "response",
+                 "request_seq": 5,
+                 "success": true,
+                 "command": "setExceptionBreakpoints"
+             }
+
+D+00012.844: Server[1] --> {
+                 "pydevd_cmd_id": 103,
+                 "seq": 22,
+                 "type": "event",
+                 "event": "thread",
+                 "body": {
+                     "reason": "started",
+                     "threadId": 1
+                 }
+             }
+
+D+00012.844: /handling #22 event "thread" from Server[1]/
+             Propagation deferred.
+
+D+00012.859: Client[1] --> {
+                 "seq": 6,
+                 "type": "request",
+                 "command": "configurationDone"
+             }
+
+D+00012.859: /handling #6 request "configurationDone" from Client[1]/
+             Server[1] <-- {
+                 "seq": 9,
+                 "type": "request",
+                 "command": "configurationDone"
+             }
+
+D+00012.859: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 24,
+                 "type": "response",
+                 "request_seq": 9,
+                 "success": true,
+                 "command": "configurationDone"
+             }
+
+D+00012.859: /handling #6 request "configurationDone" from Client[1]/
+             Client[1] <-- {
+                 "seq": 9,
+                 "type": "response",
+                 "request_seq": 6,
+                 "success": true,
+                 "command": "configurationDone"
+             }
+
+D+00012.859: /handling #6 request "configurationDone" from Client[1]/
+             Client[1] <-- {
+                 "seq": 10,
+                 "type": "response",
+                 "request_seq": 2,
+                 "success": true,
+                 "command": "attach"
+             }
+
+D+00012.859: /handling #6 request "configurationDone" from Client[1]/
+             Propagating deferred events to Client[1]...
+
+D+00012.859: /handling #6 request "configurationDone" from Client[1]/
+             Propagating deferred #10 event "process" from Server[1]
+
+D+00012.859: /handling #6 request "configurationDone" from Client[1]/
+             Client[1] <-- {
+                 "seq": 11,
+                 "type": "event",
+                 "event": "process",
+                 "body": {
+                     "name": "",
+                     "systemProcessId": 231712,
+                     "isLocalProcess": true,
+                     "startMethod": "attach"
+                 }
+             }
+
+D+00012.859: /handling #6 request "configurationDone" from Client[1]/
+             Propagating deferred #22 event "thread" from Server[1]
+
+D+00012.859: /handling #6 request "configurationDone" from Client[1]/
+             Client[1] <-- {
+                 "seq": 12,
+                 "type": "event",
+                 "event": "thread",
+                 "body": {
+                     "reason": "started",
+                     "threadId": 1
+                 }
+             }
+
+I+00012.859: /handling #6 request "configurationDone" from Client[1]/
+             All deferred events propagated to Client[1].
+
+D+00012.859: Client[1] --> {
+                 "seq": 7,
+                 "type": "request",
+                 "command": "threads"
+             }
+
+D+00012.859: /handling #7 request "threads" from Client[1]/
+             Server[1] <-- {
+                 "seq": 10,
+                 "type": "request",
+                 "command": "threads"
+             }
+
+D+00012.984: Client[1] --> {
+                 "seq": 8,
+                 "type": "request",
+                 "command": "threads"
+             }
+
+D+00049.562: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 26,
+                 "type": "response",
+                 "request_seq": 10,
+                 "success": true,
+                 "command": "threads",
+                 "body": {
+                     "threads": [
+                         {
+                             "id": 1,
+                             "name": "MainThread"
+                         }
+                     ]
+                 }
+             }
+
+D+00049.562: /handling #7 request "threads" from Client[1]/
+             Client[1] <-- {
+                 "seq": 13,
+                 "type": "response",
+                 "request_seq": 7,
+                 "success": true,
+                 "command": "threads",
+                 "body": {
+                     "threads": [
+                         {
+                             "id": 1,
+                             "name": "MainThread"
+                         }
+                     ]
+                 }
+             }
+
+D+00049.562: /handling #8 request "threads" from Client[1]/
+             Server[1] <-- {
+                 "seq": 11,
+                 "type": "request",
+                 "command": "threads"
+             }
+
+D+00049.562: Server[1] --> {
+                 "pydevd_cmd_id": 157,
+                 "seq": 28,
+                 "type": "event",
+                 "event": "stopped",
+                 "body": {
+                     "reason": "breakpoint",
+                     "threadId": 1,
+                     "preserveFocusHint": false,
+                     "allThreadsStopped": true
+                 }
+             }
+
+D+00049.562: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 30,
+                 "type": "response",
+                 "request_seq": 11,
+                 "success": true,
+                 "command": "threads",
+                 "body": {
+                     "threads": [
+                         {
+                             "id": 1,
+                             "name": "MainThread"
+                         }
+                     ]
+                 }
+             }
+
+D+00049.562: /handling #8 request "threads" from Client[1]/
+             Client[1] <-- {
+                 "seq": 14,
+                 "type": "response",
+                 "request_seq": 8,
+                 "success": true,
+                 "command": "threads",
+                 "body": {
+                     "threads": [
+                         {
+                             "id": 1,
+                             "name": "MainThread"
+                         }
+                     ]
+                 }
+             }
+
+D+00049.562: /handling #28 event "stopped" from Server[1]/
+             Client[1] <-- {
+                 "seq": 15,
+                 "type": "event",
+                 "event": "stopped",
+                 "body": {
+                     "reason": "breakpoint",
+                     "threadId": 1,
+                     "preserveFocusHint": false,
+                     "allThreadsStopped": true
+                 }
+             }
+
+D+00049.594: Client[1] --> {
+                 "seq": 9,
+                 "type": "request",
+                 "command": "threads"
+             }
+
+D+00049.594: /handling #9 request "threads" from Client[1]/
+             Server[1] <-- {
+                 "seq": 12,
+                 "type": "request",
+                 "command": "threads"
+             }
+
+D+00049.594: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 32,
+                 "type": "response",
+                 "request_seq": 12,
+                 "success": true,
+                 "command": "threads",
+                 "body": {
+                     "threads": [
+                         {
+                             "id": 1,
+                             "name": "MainThread"
+                         }
+                     ]
+                 }
+             }
+
+D+00049.594: /handling #9 request "threads" from Client[1]/
+             Client[1] <-- {
+                 "seq": 16,
+                 "type": "response",
+                 "request_seq": 9,
+                 "success": true,
+                 "command": "threads",
+                 "body": {
+                     "threads": [
+                         {
+                             "id": 1,
+                             "name": "MainThread"
+                         }
+                     ]
+                 }
+             }
+
+D+00049.594: Client[1] --> {
+                 "seq": 10,
+                 "type": "request",
+                 "command": "stackTrace",
+                 "arguments": {
+                     "threadId": 1,
+                     "startFrame": 0,
+                     "levels": 1
+                 }
+             }
+
+D+00049.594: /handling #10 request "stackTrace" from Client[1]/
+             Server[1] <-- {
+                 "seq": 13,
+                 "type": "request",
+                 "command": "stackTrace",
+                 "arguments": {
+                     "threadId": 1,
+                     "startFrame": 0,
+                     "levels": 1
+                 }
+             }
+
+D+00049.594: Server[1] --> {
+                 "pydevd_cmd_id": 203,
+                 "seq": 34,
+                 "type": "event",
+                 "event": "module",
+                 "body": {
+                     "reason": "new",
+                     "module": {
+                         "id": 0,
+                         "name": "__main__",
+                         "path": "D:\\repos\\github\\feeefeee\\debugpy11\\src\\app1\\app1\\testing.py",
+                         "package": "None"
+                     }
+                 }
+             }
+
+D+00049.594: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 36,
+                 "type": "response",
+                 "request_seq": 13,
+                 "success": true,
+                 "command": "stackTrace",
+                 "body": {
+                     "stackFrames": [
+                         {
+                             "id": 2,
+                             "name": "<module>",
+                             "line": 2,
+                             "column": 1,
+                             "source": {
+                                 "path": "D:\\repos\\github\\feeefeee\\debugpy11\\src\\app1\\app1\\testing.py",
+                                 "sourceReference": 0
+                             }
+                         }
+                     ],
+                     "totalFrames": 1
+                 }
+             }
+
+D+00049.594: /handling #10 request "stackTrace" from Client[1]/
+             Client[1] <-- {
+                 "seq": 17,
+                 "type": "response",
+                 "request_seq": 10,
+                 "success": true,
+                 "command": "stackTrace",
+                 "body": {
+                     "stackFrames": [
+                         {
+                             "id": 2,
+                             "name": "<module>",
+                             "line": 2,
+                             "column": 1,
+                             "source": {
+                                 "path": "D:\\repos\\github\\feeefeee\\debugpy11\\src\\app1\\app1\\testing.py",
+                                 "sourceReference": 0
+                             }
+                         }
+                     ],
+                     "totalFrames": 1
+                 }
+             }
+
+D+00049.594: /handling #34 event "module" from Server[1]/
+             Client[1] <-- {
+                 "seq": 18,
+                 "type": "event",
+                 "event": "module",
+                 "body": {
+                     "reason": "new",
+                     "module": {
+                         "id": 0,
+                         "name": "__main__",
+                         "path": "D:\\repos\\github\\feeefeee\\debugpy11\\src\\app1\\app1\\testing.py",
+                         "package": "None"
+                     }
+                 }
+             }
+
+D+00050.015: Client[1] --> {
+                 "seq": 11,
+                 "type": "request",
+                 "command": "scopes",
+                 "arguments": {
+                     "frameId": 2
+                 }
+             }
+
+D+00050.015: /handling #11 request "scopes" from Client[1]/
+             Server[1] <-- {
+                 "seq": 14,
+                 "type": "request",
+                 "command": "scopes",
+                 "arguments": {
+                     "frameId": 2
+                 }
+             }
+
+D+00050.015: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 38,
+                 "type": "response",
+                 "request_seq": 14,
+                 "success": true,
+                 "command": "scopes",
+                 "body": {
+                     "scopes": [
+                         {
+                             "name": "Locals",
+                             "variablesReference": 3,
+                             "expensive": false,
+                             "presentationHint": "locals",
+                             "source": {}
+                         },
+                         {
+                             "name": "Globals",
+                             "variablesReference": 4,
+                             "expensive": false,
+                             "source": {}
+                         }
+                     ]
+                 }
+             }
+
+D+00050.015: /handling #11 request "scopes" from Client[1]/
+             Client[1] <-- {
+                 "seq": 19,
+                 "type": "response",
+                 "request_seq": 11,
+                 "success": true,
+                 "command": "scopes",
+                 "body": {
+                     "scopes": [
+                         {
+                             "name": "Locals",
+                             "variablesReference": 3,
+                             "expensive": false,
+                             "presentationHint": "locals",
+                             "source": {}
+                         },
+                         {
+                             "name": "Globals",
+                             "variablesReference": 4,
+                             "expensive": false,
+                             "source": {}
+                         }
+                     ]
+                 }
+             }
+
+D+00050.015: Client[1] --> {
+                 "seq": 12,
+                 "type": "request",
+                 "command": "variables",
+                 "arguments": {
+                     "variablesReference": 3
+                 }
+             }
+
+D+00050.015: /handling #12 request "variables" from Client[1]/
+             Server[1] <-- {
+                 "seq": 15,
+                 "type": "request",
+                 "command": "variables",
+                 "arguments": {
+                     "variablesReference": 3
+                 }
+             }
+
+D+00050.031: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 40,
+                 "type": "response",
+                 "request_seq": 15,
+                 "success": true,
+                 "command": "variables",
+                 "body": {
+                     "variables": [
+                         {
+                             "name": "special variables",
+                             "value": "",
+                             "type": "",
+                             "evaluateName": "special variables",
+                             "variablesReference": 5
+                         },
+                         {
+                             "name": "debugpy",
+                             "value": "<module 'debugpy' from 'C:\\\\Python\\\\Python39\\\\lib\\\\site-packages\\\\debugpy\\\\__init__.py'>",
+                             "type": "module",
+                             "evaluateName": "debugpy",
+                             "variablesReference": 6
+                         },
+                         {
+                             "name": "os",
+                             "value": "<module 'os' from 'C:\\\\Python\\\\Python39\\\\Lib\\\\os.py'>",
+                             "type": "module",
+                             "evaluateName": "os",
+                             "variablesReference": 7
+                         },
+                         {
+                             "name": "sys",
+                             "value": "<module 'sys' (built-in)>",
+                             "type": "module",
+                             "evaluateName": "sys",
+                             "variablesReference": 8
+                         }
+                     ]
+                 }
+             }
+
+D+00050.031: /handling #12 request "variables" from Client[1]/
+             Client[1] <-- {
+                 "seq": 20,
+                 "type": "response",
+                 "request_seq": 12,
+                 "success": true,
+                 "command": "variables",
+                 "body": {
+                     "variables": [
+                         {
+                             "name": "special variables",
+                             "value": "",
+                             "type": "",
+                             "evaluateName": "special variables",
+                             "variablesReference": 5
+                         },
+                         {
+                             "name": "debugpy",
+                             "value": "<module 'debugpy' from 'C:\\\\Python\\\\Python39\\\\lib\\\\site-packages\\\\debugpy\\\\__init__.py'>",
+                             "type": "module",
+                             "evaluateName": "debugpy",
+                             "variablesReference": 6
+                         },
+                         {
+                             "name": "os",
+                             "value": "<module 'os' from 'C:\\\\Python\\\\Python39\\\\Lib\\\\os.py'>",
+                             "type": "module",
+                             "evaluateName": "os",
+                             "variablesReference": 7
+                         },
+                         {
+                             "name": "sys",
+                             "value": "<module 'sys' (built-in)>",
+                             "type": "module",
+                             "evaluateName": "sys",
+                             "variablesReference": 8
+                         }
+                     ]
+                 }
+             }
+
+D+00050.031: Client[1] --> {
+                 "seq": 13,
+                 "type": "request",
+                 "command": "stackTrace",
+                 "arguments": {
+                     "threadId": 1,
+                     "startFrame": 1,
+                     "levels": 19
+                 }
+             }
+
+D+00050.031: /handling #13 request "stackTrace" from Client[1]/
+             Server[1] <-- {
+                 "seq": 16,
+                 "type": "request",
+                 "command": "stackTrace",
+                 "arguments": {
+                     "threadId": 1,
+                     "startFrame": 1,
+                     "levels": 19
+                 }
+             }
+
+D+00050.031: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 42,
+                 "type": "response",
+                 "request_seq": 16,
+                 "success": true,
+                 "command": "stackTrace",
+                 "body": {
+                     "stackFrames": [],
+                     "totalFrames": 1
+                 }
+             }
+
+D+00050.031: /handling #13 request "stackTrace" from Client[1]/
+             Client[1] <-- {
+                 "seq": 21,
+                 "type": "response",
+                 "request_seq": 13,
+                 "success": true,
+                 "command": "stackTrace",
+                 "body": {
+                     "stackFrames": [],
+                     "totalFrames": 1
+                 }
+             }
+
+D+00052.578: Client[1] --> {
+                 "seq": 14,
+                 "type": "request",
+                 "command": "continue",
+                 "arguments": {
+                     "threadId": 1
+                 }
+             }
+
+D+00052.578: /handling #14 request "continue" from Client[1]/
+             Server[1] <-- {
+                 "seq": 17,
+                 "type": "request",
+                 "command": "continue",
+                 "arguments": {
+                     "threadId": "*"
+                 }
+             }
+
+D+00052.578: Server[1] --> {
+                 "pydevd_cmd_id": 158,
+                 "seq": 44,
+                 "type": "event",
+                 "event": "continued",
+                 "body": {
+                     "threadId": 1,
+                     "allThreadsContinued": true
+                 }
+             }
+
+D+00052.578: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 46,
+                 "type": "response",
+                 "request_seq": 17,
+                 "success": true,
+                 "command": "continue",
+                 "body": {
+                     "allThreadsContinued": true
+                 }
+             }
+
+D+00052.578: /handling #14 request "continue" from Client[1]/
+             Client[1] <-- {
+                 "seq": 22,
+                 "type": "response",
+                 "request_seq": 14,
+                 "success": true,
+                 "command": "continue",
+                 "body": {
+                     "allThreadsContinued": true
+                 }
+             }
+
+D+00052.578: Server[1] --> {
+                 "pydevd_cmd_id": 157,
+                 "seq": 48,
+                 "type": "event",
+                 "event": "stopped",
+                 "body": {
+                     "reason": "breakpoint",
+                     "threadId": 1,
+                     "preserveFocusHint": false,
+                     "allThreadsStopped": true
+                 }
+             }
+
+D+00052.578: /handling #44 event "continued" from Server[1]/
+             Client[1] <-- {
+                 "seq": 23,
+                 "type": "event",
+                 "event": "continued",
+                 "body": {
+                     "threadId": 1,
+                     "allThreadsContinued": true
+                 }
+             }
+
+D+00052.594: /handling #48 event "stopped" from Server[1]/
+             Client[1] <-- {
+                 "seq": 24,
+                 "type": "event",
+                 "event": "stopped",
+                 "body": {
+                     "reason": "breakpoint",
+                     "threadId": 1,
+                     "preserveFocusHint": false,
+                     "allThreadsStopped": true
+                 }
+             }
+
+D+00052.609: Client[1] --> {
+                 "seq": 15,
+                 "type": "request",
+                 "command": "threads"
+             }
+
+D+00052.609: /handling #15 request "threads" from Client[1]/
+             Server[1] <-- {
+                 "seq": 18,
+                 "type": "request",
+                 "command": "threads"
+             }
+
+D+00052.609: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 50,
+                 "type": "response",
+                 "request_seq": 18,
+                 "success": true,
+                 "command": "threads",
+                 "body": {
+                     "threads": [
+                         {
+                             "id": 1,
+                             "name": "MainThread"
+                         }
+                     ]
+                 }
+             }
+
+D+00052.609: /handling #15 request "threads" from Client[1]/
+             Client[1] <-- {
+                 "seq": 25,
+                 "type": "response",
+                 "request_seq": 15,
+                 "success": true,
+                 "command": "threads",
+                 "body": {
+                     "threads": [
+                         {
+                             "id": 1,
+                             "name": "MainThread"
+                         }
+                     ]
+                 }
+             }
+
+D+00052.609: Client[1] --> {
+                 "seq": 16,
+                 "type": "request",
+                 "command": "stackTrace",
+                 "arguments": {
+                     "threadId": 1,
+                     "startFrame": 0,
+                     "levels": 1
+                 }
+             }
+
+D+00052.609: /handling #16 request "stackTrace" from Client[1]/
+             Server[1] <-- {
+                 "seq": 19,
+                 "type": "request",
+                 "command": "stackTrace",
+                 "arguments": {
+                     "threadId": 1,
+                     "startFrame": 0,
+                     "levels": 1
+                 }
+             }
+
+D+00052.609: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 52,
+                 "type": "response",
+                 "request_seq": 19,
+                 "success": true,
+                 "command": "stackTrace",
+                 "body": {
+                     "stackFrames": [
+                         {
+                             "id": 2,
+                             "name": "<module>",
+                             "line": 6,
+                             "column": 1,
+                             "source": {
+                                 "path": "D:\\repos\\github\\feeefeee\\debugpy11\\src\\app1\\app1\\testing.py",
+                                 "sourceReference": 0
+                             }
+                         }
+                     ],
+                     "totalFrames": 1
+                 }
+             }
+
+D+00052.609: /handling #16 request "stackTrace" from Client[1]/
+             Client[1] <-- {
+                 "seq": 26,
+                 "type": "response",
+                 "request_seq": 16,
+                 "success": true,
+                 "command": "stackTrace",
+                 "body": {
+                     "stackFrames": [
+                         {
+                             "id": 2,
+                             "name": "<module>",
+                             "line": 6,
+                             "column": 1,
+                             "source": {
+                                 "path": "D:\\repos\\github\\feeefeee\\debugpy11\\src\\app1\\app1\\testing.py",
+                                 "sourceReference": 0
+                             }
+                         }
+                     ],
+                     "totalFrames": 1
+                 }
+             }
+
+D+00053.047: Client[1] --> {
+                 "seq": 17,
+                 "type": "request",
+                 "command": "scopes",
+                 "arguments": {
+                     "frameId": 2
+                 }
+             }
+
+D+00053.047: /handling #17 request "scopes" from Client[1]/
+             Server[1] <-- {
+                 "seq": 20,
+                 "type": "request",
+                 "command": "scopes",
+                 "arguments": {
+                     "frameId": 2
+                 }
+             }
+
+D+00053.047: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 54,
+                 "type": "response",
+                 "request_seq": 20,
+                 "success": true,
+                 "command": "scopes",
+                 "body": {
+                     "scopes": [
+                         {
+                             "name": "Locals",
+                             "variablesReference": 3,
+                             "expensive": false,
+                             "presentationHint": "locals",
+                             "source": {}
+                         },
+                         {
+                             "name": "Globals",
+                             "variablesReference": 4,
+                             "expensive": false,
+                             "source": {}
+                         }
+                     ]
+                 }
+             }
+
+D+00053.047: /handling #17 request "scopes" from Client[1]/
+             Client[1] <-- {
+                 "seq": 27,
+                 "type": "response",
+                 "request_seq": 17,
+                 "success": true,
+                 "command": "scopes",
+                 "body": {
+                     "scopes": [
+                         {
+                             "name": "Locals",
+                             "variablesReference": 3,
+                             "expensive": false,
+                             "presentationHint": "locals",
+                             "source": {}
+                         },
+                         {
+                             "name": "Globals",
+                             "variablesReference": 4,
+                             "expensive": false,
+                             "source": {}
+                         }
+                     ]
+                 }
+             }
+
+D+00053.047: Client[1] --> {
+                 "seq": 18,
+                 "type": "request",
+                 "command": "variables",
+                 "arguments": {
+                     "variablesReference": 3
+                 }
+             }
+
+D+00053.047: /handling #18 request "variables" from Client[1]/
+             Server[1] <-- {
+                 "seq": 21,
+                 "type": "request",
+                 "command": "variables",
+                 "arguments": {
+                     "variablesReference": 3
+                 }
+             }
+
+D+00053.062: Client[1] --> {
+                 "seq": 19,
+                 "type": "request",
+                 "command": "stackTrace",
+                 "arguments": {
+                     "threadId": 1,
+                     "startFrame": 1,
+                     "levels": 19
+                 }
+             }
+
+D+00053.062: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 56,
+                 "type": "response",
+                 "request_seq": 21,
+                 "success": true,
+                 "command": "variables",
+                 "body": {
+                     "variables": [
+                         {
+                             "name": "special variables",
+                             "value": "",
+                             "type": "",
+                             "evaluateName": "special variables",
+                             "variablesReference": 9
+                         },
+                         {
+                             "name": "debugpy",
+                             "value": "<module 'debugpy' from 'C:\\\\Python\\\\Python39\\\\lib\\\\site-packages\\\\debugpy\\\\__init__.py'>",
+                             "type": "module",
+                             "evaluateName": "debugpy",
+                             "variablesReference": 6
+                         },
+                         {
+                             "name": "i",
+                             "value": "9",
+                             "type": "int",
+                             "evaluateName": "i",
+                             "variablesReference": 0
+                         },
+                         {
+                             "name": "os",
+                             "value": "<module 'os' from 'C:\\\\Python\\\\Python39\\\\Lib\\\\os.py'>",
+                             "type": "module",
+                             "evaluateName": "os",
+                             "variablesReference": 7
+                         },
+                         {
+                             "name": "sys",
+                             "value": "<module 'sys' (built-in)>",
+                             "type": "module",
+                             "evaluateName": "sys",
+                             "variablesReference": 8
+                         }
+                     ]
+                 }
+             }
+
+D+00053.062: /handling #18 request "variables" from Client[1]/
+             Client[1] <-- {
+                 "seq": 28,
+                 "type": "response",
+                 "request_seq": 18,
+                 "success": true,
+                 "command": "variables",
+                 "body": {
+                     "variables": [
+                         {
+                             "name": "special variables",
+                             "value": "",
+                             "type": "",
+                             "evaluateName": "special variables",
+                             "variablesReference": 9
+                         },
+                         {
+                             "name": "debugpy",
+                             "value": "<module 'debugpy' from 'C:\\\\Python\\\\Python39\\\\lib\\\\site-packages\\\\debugpy\\\\__init__.py'>",
+                             "type": "module",
+                             "evaluateName": "debugpy",
+                             "variablesReference": 6
+                         },
+                         {
+                             "name": "i",
+                             "value": "9",
+                             "type": "int",
+                             "evaluateName": "i",
+                             "variablesReference": 0
+                         },
+                         {
+                             "name": "os",
+                             "value": "<module 'os' from 'C:\\\\Python\\\\Python39\\\\Lib\\\\os.py'>",
+                             "type": "module",
+                             "evaluateName": "os",
+                             "variablesReference": 7
+                         },
+                         {
+                             "name": "sys",
+                             "value": "<module 'sys' (built-in)>",
+                             "type": "module",
+                             "evaluateName": "sys",
+                             "variablesReference": 8
+                         }
+                     ]
+                 }
+             }
+
+D+00053.062: /handling #19 request "stackTrace" from Client[1]/
+             Server[1] <-- {
+                 "seq": 22,
+                 "type": "request",
+                 "command": "stackTrace",
+                 "arguments": {
+                     "threadId": 1,
+                     "startFrame": 1,
+                     "levels": 19
+                 }
+             }
+
+D+00053.062: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 58,
+                 "type": "response",
+                 "request_seq": 22,
+                 "success": true,
+                 "command": "stackTrace",
+                 "body": {
+                     "stackFrames": [],
+                     "totalFrames": 1
+                 }
+             }
+
+D+00053.062: /handling #19 request "stackTrace" from Client[1]/
+             Client[1] <-- {
+                 "seq": 29,
+                 "type": "response",
+                 "request_seq": 19,
+                 "success": true,
+                 "command": "stackTrace",
+                 "body": {
+                     "stackFrames": [],
+                     "totalFrames": 1
+                 }
+             }
+
+D+00053.578: Client[1] --> {
+                 "seq": 20,
+                 "type": "request",
+                 "command": "continue",
+                 "arguments": {
+                     "threadId": 1
+                 }
+             }
+
+D+00053.578: /handling #20 request "continue" from Client[1]/
+             Server[1] <-- {
+                 "seq": 23,
+                 "type": "request",
+                 "command": "continue",
+                 "arguments": {
+                     "threadId": "*"
+                 }
+             }
+
+D+00053.594: Server[1] --> {
+                 "pydevd_cmd_id": 158,
+                 "seq": 60,
+                 "type": "event",
+                 "event": "continued",
+                 "body": {
+                     "threadId": 1,
+                     "allThreadsContinued": true
+                 }
+             }
+
+D+00057.406: Client[1] --> {
+                 "seq": 21,
+                 "type": "request",
+                 "command": "continue",
+                 "arguments": {
+                     "threadId": 1
+                 }
+             }
+
+D+00058.422: Client[1] --> {
+                 "seq": 22,
+                 "type": "request",
+                 "command": "continue",
+                 "arguments": {
+                     "threadId": 1
+                 }
+             }
+
+D+01298.203: Client[1] --> {
+                 "seq": 23,
+                 "type": "request",
+                 "command": "continue",
+                 "arguments": {
+                     "threadId": 1
+                 }
+             }
+
+D+01298.937: Client[1] --> {
+                 "seq": 24,
+                 "type": "request",
+                 "command": "continue",
+                 "arguments": {
+                     "threadId": 1
+                 }
+             }
+
+D+01299.125: Client[1] --> {
+                 "seq": 25,
+                 "type": "request",
+                 "command": "continue",
+                 "arguments": {
+                     "threadId": 1
+                 }
+             }
+
+D+01299.328: Client[1] --> {
+                 "seq": 26,
+                 "type": "request",
+                 "command": "continue",
+                 "arguments": {
+                     "threadId": 1
+                 }
+             }
+
+D+01299.531: Client[1] --> {
+                 "seq": 27,
+                 "type": "request",
+                 "command": "continue",
+                 "arguments": {
+                     "threadId": 1
+                 }
+             }
+
+D+01299.687: Client[1] --> {
+                 "seq": 28,
+                 "type": "request",
+                 "command": "continue",
+                 "arguments": {
+                     "threadId": 1
+                 }
+             }
+
+D+01299.828: Client[1] --> {
+                 "seq": 29,
+                 "type": "request",
+                 "command": "continue",
+                 "arguments": {
+                     "threadId": 1
+                 }
+             }
+
+D+01300.031: Client[1] --> {
+                 "seq": 30,
+                 "type": "request",
+                 "command": "continue",
+                 "arguments": {
+                     "threadId": 1
+                 }
+             }
+
+D+01436.031: Server[1] --> {
+                 "pydevd_cmd_id": 502,
+                 "seq": 62,
+                 "type": "response",
+                 "request_seq": 23,
+                 "success": true,
+                 "command": "continue",
+                 "body": {
+                     "allThreadsContinued": true
+                 }
+             }
+
+D+01436.031: /handling #20 request "continue" from Client[1]/
+             Client[1] <-- {
+                 "seq": 30,
+                 "type": "response",
+                 "request_seq": 20,
+                 "success": true,
+                 "command": "continue",
+                 "body": {
+                     "allThreadsContinued": true
+                 }
+             }
+
+D+01436.031: /handling #60 event "continued" from Server[1]/
+             Client[1] <-- {
+                 "seq": 31,
+                 "type": "event",
+                 "event": "continued",
+                 "body": {
+                     "threadId": 1,
+                     "allThreadsContinued": true
+                 }
+             }
+
+D+01436.031: /handling #21 request "continue" from Client[1]/
+             Server[1] <-- {
+                 "seq": 24,
+                 "type": "request",
+                 "command": "continue",
+                 "arguments": {
+                     "threadId": "*"
+                 }
+             }
+

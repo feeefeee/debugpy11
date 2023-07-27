@@ -1,0 +1,5 @@
+.vs
+*.vcxproj.filters
+*.vcxproj.user
+src/app1/app1/x64/Debug
+src/app1/x64/Debug
